@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-function Votes({ video }) {
-    const [upvoteNum, setUpvoteNum] = useState(video.upvotes)
-    const [downvoteNum, setDownvoteNum] = useState(video.downvotes)
+function Votes({ upvotes, downvotes }) {
+    const [upvoteNum, setUpvoteNum] = useState(upvotes)
+    const [downvoteNum, setDownvoteNum] = useState(downvotes)
 
     const handleUpvote = () => setUpvoteNum(upvoteNum + 1)
     

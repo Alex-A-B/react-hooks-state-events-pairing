@@ -7,7 +7,6 @@ function DisplayVideo({ video }) {
 
     const handleCommentClick = () => setShowComments(!showComments)
     
-
     return (
         <div className="video">
             <iframe
@@ -20,7 +19,7 @@ function DisplayVideo({ video }) {
             />
             <h1 className="title">{video.title}</h1>
             <span>{video.views} Views | Uploaded {video.createdAt}</span>
-            <Votes video={video} />
+            <Votes upvotes={video.upvotes} downvotes={video.downvotes} />
             <button className="showHideComments" onClick={handleCommentClick}>{showComments ? "Hide" : "Show" } Comments</button>
             {showComments ? <DisplayComments comments={video.comments}/> : null}
         </div>
