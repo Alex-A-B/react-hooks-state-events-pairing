@@ -8,7 +8,6 @@ function DisplayComments( { comments }) {
             {comments.map((comment) => <CommentItem key={comment.id} user={comment.user} text={comment.comment}/>)}
         </div>
     )
-    
 }
 
 export default DisplayComments
